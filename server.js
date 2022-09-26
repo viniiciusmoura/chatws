@@ -4,7 +4,7 @@ app.use(express.static("public"))
 
 
 const http = require("http").Server(app)
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 
                   //FUNÇÃO DE CALLBACK
 http.listen(PORT, () => console.log(`Servidor iniciado na porta ${PORT}`))
